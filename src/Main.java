@@ -7,5 +7,14 @@ public class Main {
         for (int i = 10; i < 15; i++) schedule[1][i] = true;
         a.printPeriod(2);
         a.findFreeBlock(2,15);
+        AppointmentBook b = new AppointmentBook(schedule);
+        int period = 2;
+        while(period < 5)
+        {
+            System.out.println("period: " + period);
+            b.printPeriod(period);
+            period++;
+        }
+
     }
 }
