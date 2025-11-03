@@ -33,7 +33,7 @@ public record AppointmentBook(boolean[][] schedule) {
         for (int i = startPeriod; i <= endPeriod; i++) {
             int freeBlock = findFreeBlock(i, duration);
             if (freeBlock > -1) {
-                reserveBlock(i, freeBlock, duration);
+                reserveBlock(freeBlock, duration, i);
                 return true;
             }
         }
